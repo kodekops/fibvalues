@@ -1,0 +1,17 @@
+services:
+  redis-server:
+    image: redis
+  postgres:
+    image: postgres
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=supersecret
+      - POSTGRES_DB=fibvalues
+  worker:
+    build:
+      context: ./worker
+    environment:
+      - REDIS_HOST=redis-server
+      - REDIS_PORT=6379
+    depends_on:
+      - redis-server
