@@ -15,5 +15,5 @@ jobs:
 
       - name: unit testing
         run: |
-          docker image build . -t kodega2016/react-app:dev -f ./client/Dockerfile.dev
+          docker image build ./client -t kodega2016/react-app:dev -f ./client/Dockerfile.dev
           docker container run -e CI=true kodega2016/react-app:dev npm run test
