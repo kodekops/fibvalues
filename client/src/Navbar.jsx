@@ -7,7 +7,7 @@ export default function NavBar() {
       <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div className="container">
           <Link className="navbar-brand" to="/">
-            Fib Calculator (DEV)
+            Fib Calculator (PROD V4)
           </Link>
           <button
             className="navbar-toggler"
